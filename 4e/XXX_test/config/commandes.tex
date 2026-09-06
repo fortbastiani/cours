@@ -1,0 +1,83 @@
+% ============================================================
+% COMMANDES PERSONNALISÉES
+% ============================================================
+
+\newcommand{\bb}[1]{\textbf{#1}}
+\newcommand{\ii}[1]{\textit{#1}}
+
+\newcommand{\cm}{\,\mathrm{cm}}
+\newcommand{\m}{\,\mathrm{m}}
+
+\newcommand{\reponse}[1]{\boxed{#1}}
+
+% ============================================================
+% TABLEAUX
+% ============================================================
+
+\newcommand{\ligneentete}{%
+    \rowcolor{Bleu}%
+    \color{white}\bfseries
+}
+
+\newcommand{\entete}[1]{%
+    \cellcolor{Bleu}\color{white}\bb{#1}%
+}
+
+
+\NewDocumentCommand{\hl}{O{JauneClair}m}{%
+  \tcbox[
+    on line,
+    colback=#1,
+    colframe=#1,
+    boxrule=0pt,
+    arc=4pt,
+    left=0pt,
+    right=0pt,
+    top=1pt,
+    bottom=1pt
+  ]{#2}%
+}
+
+\NewDocumentCommand{\hlb}{O{JauneClair}m}{%
+  \tcbox[
+    on line,
+    colback=#1,
+    colframe=#1,
+    boxrule=0pt,
+    arc=4pt,
+    left=0pt,
+    right=0pt,
+    top=1pt,
+    bottom=1pt
+    ]{\bb{#2}}%
+}
+
+\newcommand{\answer}[2][VertClair]{%
+    \ifanswers
+        \hl[#1]{#2}%
+    \else
+        \settowidth{\dimen0}{$\displaystyle #2$}%
+        \makebox[\dimexpr1.5\dimen0\relax][l]{%
+            \leaders\hbox to 0.5em{\hss.\hss}\hfill
+        }%
+    \fi
+}
+
+
+
+\newcommand{\graphanswer}[1]{%
+    \ifanswers
+        #1%
+    \else
+        0%
+    \fi
+}
+
+\newcommand{\exo}[1]{%
+    \includegraphics[
+        width=\linewidth,
+        keepaspectratio
+    ]{#1}%
+}
+
+
