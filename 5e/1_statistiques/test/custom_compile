@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+import subprocess
+from pathlib import Path
+import shutil
+
+EXPORT = Path(".export")
+EXPORT.mkdir(exist_ok=True)
+
+
+def compile_version(prof: bool, output: str, printable: bool=False):
+    prefix = ""
+    if prof:
+        prefix += r"\def\PROF{}"
+    if printable:
+        prefix += r"\def\PRINT{}"
+
+    tex_input = prefix + r"\input{main.tex}"
+
+    result = subprocess.run(
+        [
+            "lualatex",
+            "-interaction=nonstopmode",
+            "-halt-on-error",
+            "-output-directory=.export",
+            tex_input,
+        ]
+    )
+
+    if result.returncode != 0:
+        raise SystemExit(f"\n❌ Erreur lors de la compilation de {output}")
+
+    shutil.copy(EXPORT / "main.pdf", output)
+
+
+compile_version(False, "impression.pdf", True)
+compile_version(False, "cours.pdf")
+compile_version(True, "réponses.pdf")
+

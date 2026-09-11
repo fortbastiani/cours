@@ -1,0 +1,251 @@
+% ============================================================
+% ENVIRONNEMENTS
+% ============================================================
+
+% ------------------------------------------------------------
+% Objectifs
+% ------------------------------------------------------------
+
+\newtcolorbox{objectifs}{
+    colback=OrangeClair,
+    colframe=Orange,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Objectifs},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+% ------------------------------------------------------------
+% Rappel de cours
+% ------------------------------------------------------------
+
+\newtcolorbox{rappelbox}{
+    colback=VioletClair,
+    colframe=Violet,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Rappel de cours},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+% ------------------------------------------------------------
+% Théorème
+% ------------------------------------------------------------
+
+\newtcolorbox[auto counter]{theoremebox}{
+    colback=RougeClair,
+    colframe=Rouge,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Théorème \thetcbcounter},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+% ------------------------------------------------------------
+% Lemme
+% ------------------------------------------------------------
+
+\newtcolorbox{lemmabox}{
+    colback=IndigoClair,
+    colframe=Indigo,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Lemme},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+% ------------------------------------------------------------
+% Définition
+% ------------------------------------------------------------
+
+
+\newtcolorbox[auto counter]{definitionbox}{
+    colback=BleuClair,
+    colframe=Bleu,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Définition \thetcbcounter},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+
+% ------------------------------------------------------------
+% Point méthode
+% ------------------------------------------------------------
+
+\newtcolorbox{methodebox}{
+    colback=TurquoiseClair,
+    colframe=Turquoise,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Point méthode},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+% ------------------------------------------------------------
+% Attention / erreurs fréquentes
+% ------------------------------------------------------------
+
+\newtcolorbox{attentionbox}{
+    colback=JauneClair,
+    colframe=Jaune,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Attention !},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+% ------------------------------------------------------------
+% Exercices
+% ------------------------------------------------------------
+
+\newtcolorbox{exercicebox}{
+    colback=white,
+    colframe=Bleu,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Exercice},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+% ------------------------------------------------------------
+% exemple
+% ------------------------------------------------------------
+
+\newcounter{exemple}
+
+\newtcolorbox{exemplebox}{
+    colback=white,
+    colframe=Bleu,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Exemple \stepcounter{exemple}\theexemple},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+\newtcolorbox{exempleboxsuite}{
+    colback=white,
+    colframe=Bleu,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Exemple \theexemple\ (suite)},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+% ------------------------------------------------------------
+% remarque
+% ------------------------------------------------------------
+
+\newtcolorbox{remarquebox}{
+    colback=white,
+    colframe=Violet,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Remarque},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+% ------------------------------------------------------------
+% Correction
+% ------------------------------------------------------------
+
+\newtcolorbox{correctionbox}{
+    colback=VertClair,
+    colframe=Vert,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Correction},
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+
+% ============================================================
+% TABLEAUX
+% ============================================================
+
+\newenvironment{tableau}[1]
+{%
+    \renewcommand{\arraystretch}{1.3}%
+    \begin{center}%
+    \begin{tabularx}{\linewidth}{#1}%
+    \toprule
+}
+{%
+    \bottomrule
+    \end{tabularx}%
+    \end{center}%
+    \renewcommand{\arraystretch}{1}%
+}
+
+
+\newenvironment{exocol}{%
+    \vspace{0pt}%
+    \begin{minipage}[t]{0.47\textwidth}%
+    \vspace{0pt}%
+}{%
+    \end{minipage}%
+}
+
+
+
+\newenvironment{exopage}
+{%
+    \thispagestyle{empty}
+}
+{%
+    \clearpage
+}
+
+
+\newenvironment{exogrid}[1][2]{%
+    \begin{tcbraster}[
+        raster columns=#1,
+        raster column skip=5mm,
+        raster row skip=5mm,
+        raster valign=top,
+        raster every box/.style={
+            blankest,
+            boxsep=0pt,
+            left=0pt,
+            right=0pt,
+            top=0pt,
+            bottom=0pt,
+        }
+    ]
+}{%
+    \end{tcbraster}
+}
+
