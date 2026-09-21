@@ -1,21 +1,19 @@
 \documentclass[12pt,a4paper]{article}
 
 \newif\ifanswers
-
 \ifdefined\PROF
     \answerstrue
 \else
     \answersfalse
 \fi
 
+\ifdefined\CLASSE
+\else
+    \def\CLASSE{}
+\fi
 
 
-% Configuration
-\input{config/packages}
-\input{config/couleurs}
-\input{config/commandes}
-\input{config/environnements}
-
+\input{config/preamble}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -44,16 +42,17 @@
 \input{config/frontpage.tex}
 \input{sections/0_objectifs}
 \input{sections/1_vocabulaire}
-\input{exos/serie0}
+% \input{exos/serie0}
 \input{sections/2_frequence}
-\input{exos/serie1}
+% \input{exos/serie1}
 \input{sections/3_moyenne}
-\input{exos/serie2}
+% \input{exos/serie2}
+\arret{5F}
+\vspace{10cm}
 \input{sections/4_repr_donnee}
-\input{exos/serie3}
+% \input{exos/serie3}
 
 
 % \input{template/referentiel}
 
 \end{document}
-

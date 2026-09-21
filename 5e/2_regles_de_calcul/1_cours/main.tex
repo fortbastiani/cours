@@ -1,0 +1,51 @@
+\documentclass[12pt,a4paper]{article}
+
+\newif\ifanswers
+\ifdefined\PROF
+    \answerstrue
+\else
+    \answersfalse
+\fi
+
+\ifdefined\CLASSE
+\else
+    \def\CLASSE{}
+\fi
+
+
+\input{config/preamble}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% En-tête
+
+% Numéro de page
+\fancyfoot[C]{\thepage}
+% Ligne sous l'en-tête
+\renewcommand{\headrulewidth}{0.4pt}
+% Pas de ligne au-dessus du pied de page
+\renewcommand{\footrulewidth}{0pt}
+
+% ===============================================
+% ###### INFO ENTETE ########
+% ===============================================
+\def\numchap{2}
+\def\titre{Priorités opératoires}
+\def\soustitre{Comment faire un calcul qui comporte plusieurs opérations ?}
+
+\fancyhead[L]{Mathématiques -- 5ème}
+\fancyhead[R]{Chapitre \numchap -- \titre}
+
+\begin{document}
+\renewcommand{\labelitemi}{\textbullet}
+
+\input{config/frontpage.tex}
+\input{sections/1_sans_parenthèses.tex}
+\input{sections/2_distributivité.tex}
+\input{sections/3_puissances.tex}
+
+
+% \input{template/referentiel}
+
+\end{document}
