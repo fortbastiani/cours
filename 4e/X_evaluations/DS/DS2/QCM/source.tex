@@ -1,0 +1,188 @@
+\documentclass[12pt]{extarticle}
+
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+% Set page layout after the config files
+\geometry{
+  paper=a4paper,
+  hmargin=1cm,
+  headheight=1cm,
+  headsep=.3cm,
+  footskip=0cm,
+  top=1.5cm,
+  left=1.3cm,
+  right=1.3cm,
+  bottom=1.5cm
+}
+
+%\geometry{hmargin=1cm,headheight=1cm,headsep=.3cm,footskip=0cm,top=1.5cm,bottom=1.5cm}
+
+\def\AMCbeginQuestion#1#2{\textbf{(#1)\hspace{2mm}}}
+\def\AMCotextReserved{\emph{(Reservé)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest\AMCpostOquest=-7mm
+\AMCformHSpace=.3em
+
+\begin{document}
+\baremeDefautS{b=1,m=0}
+\exemplaire{24}{    
+
+% ---- Header ------
+\fbox{
+    \begin{minipage}{.43\linewidth}
+        \namefield{Nom: }
+        Prénom :\\
+        Date:
+    \end{minipage}
+}
+\hfill
+\begin{minipage}{.48\linewidth}
+    \AMCcodeGridInt[vertical=false]{etu}{2}
+\end{minipage}
+% ---- Fin Header ------
+
+
+\begin{exercicebox}[\it{(Nombres relatifs)}]
+
+    \begin{question}{sommeneg}
+        \begin{minipage}{0.22\textwidth}
+        $(-10)+(-2)$ vaut...
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.69\textwidth}
+        \begin{reponseshoriz}
+            \mauvaise{8}
+            \bonne{-12}
+            \mauvaise{+20}
+            \mauvaise{12}
+        \end{reponseshoriz}
+        \end{minipage}
+    \end{question}
+
+
+    \begin{question}{divposneg}
+        $(-6)\div(-2)$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{-3}
+            \mauvaise{-12}
+            \bonne{+3}
+            \mauvaise{-6}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{subsub}
+        $(-18)-(-8)$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{26}
+            \bonne{-10}
+            \mauvaise{-14}
+            \mauvaise{-26}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{prioneg}
+        $9\times[\hspace{2pt}(-3)\times(+2)+5]$ vaut…
+        \begin{reponseshoriz}
+            \bonne{-9}
+            \mauvaise{99}
+            \mauvaise{59}
+            \mauvaise{-81}
+        \end{reponseshoriz}
+    \end{question}
+
+
+\end{exercicebox}
+
+\begin{exercicebox}[\it{(Carré et racine carrée)}]
+
+    \begin{question}{racine1}
+        \begin{minipage}{0.22\textwidth}
+        La racine carrée de deux est égale à :
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.69\textwidth}
+        \begin{reponseshoriz}
+            \bonne{$\sqrt{2}$}
+            \mauvaise{1.41}
+            \mauvaise{4}
+            \mauvaise{$2^2$}
+        \end{reponseshoriz}
+        \end{minipage}
+    \end{question}
+
+    \begin{question}{carré}
+        \begin{minipage}{0.30\textwidth}
+        Le carré de 12 est égale à :
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.65\textwidth}
+        \begin{reponseshoriz}
+            \bonne{144}
+            \mauvaise{124}
+            \mauvaise{24}
+            \mauvaise{3.5}
+        \end{reponseshoriz}
+        \end{minipage}
+    \end{question}
+
+    \begin{question}{carrépetit}
+        \begin{minipage}{0.30\textwidth}
+        Le carré de 1.5 est égale à :
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.65\textwidth}
+        \begin{reponseshoriz}
+            \bonne{2.25}
+            \mauvaise{3}
+            \mauvaise{2.5}
+            \mauvaise{2}
+        \end{reponseshoriz}
+        \end{minipage}
+    \end{question}
+
+\end{exercicebox}
+
+\begin{exercicebox}[\it{(Pythagore)}]
+
+
+    \begin{question}{qcmegapythagore2}    
+        ABC est rectangle en C. L'égalité de Pythagore s'écrit :
+        \begin{reponses}
+            \mauvaise{$AB^2=BC+AC$}
+            \mauvaise{$AB^2=AC+CB$}
+            \mauvaise{$AC^2=BC^2+AB^2$}
+            \bonne{$AB^2=AC^2+BC^2$}
+        \end{reponses}
+    \end{question}
+
+    \begin{question}{qcmpythahypo}
+        Les côtés de l'angle droit d'un triangle rectangle mesurent 3m et 4m.
+        L'hypoténuse mesure :
+        \begin{reponseshoriz}
+            \mauvaise{3.5m}
+            \mauvaise{7m}
+            \mauvaise{5.5m}
+            \bonne{5m}
+        \end{reponseshoriz}
+    \end{question}
+
+
+    \begin{question}{qcmreciproque}    
+        La réciproque du théorème de Pythagore sert à ...
+        \begin{reponses}
+            \mauvaise{montrer qu'un triangle n'est pas rectangle.}
+            \mauvaise{calculer l'aire d'un triangle rectangle.}
+            \mauvaise{calculer la longueur de l'hypoténuse dans un triangle
+            rectangle.}
+            \bonne{montrer qu'un triangle est rectangle}
+        \end{reponses}
+    \end{question}
+
+\end{exercicebox}
+
+
+}   
+\end{document}

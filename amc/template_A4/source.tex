@@ -1,0 +1,148 @@
+\documentclass[a4paper, 10pt]{article}
+% Configuration
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+
+\geometry{hmargin=1cm,headheight=1cm,headsep=.3cm,footskip=0cm,top=1.5cm,bottom=1.5cm}
+
+\def\AMCotextReserved{\emph{(Reservé)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest\AMCpostOquest=-7mm
+\AMCformHSpace=.3em
+
+\begin{document}
+
+\exemplaire{3}{    
+% ---- Header ------
+\fbox{\begin{minipage}{.48\linewidth}
+  Nom et prénom :\\
+  Date:
+\end{minipage}}
+\hfill
+\begin{minipage}{.48\linewidth}
+    \AMCcodeGridInt[vertical=false]{etu}{2}
+\end{minipage}
+\vspace{5mm}
+% ---- Fin Header ------
+
+\begin{exercicebox}[\it{QCM}]
+    \begin{minipage}{0.48\textwidth}
+
+        \begin{question}{prez}    
+              Dans un calcul sans parenthèses, on effectue d'abord…
+              \begin{reponses}
+                  \bonne{les multiplications et divisions}
+                  \mauvaise{les additions et soustractions}
+                  \mauvaise{les opérations de gauche à droite}
+                  \mauvaise{l'opération avec le plus grand nombre}
+              \end{reponses}
+        \end{question}
+
+        \begin{question}{qcmprioparentheses}\bareme{b=1}
+            $(4+6)\times2$ vaut…
+            \begin{reponseshoriz}
+                \mauvaise{16}
+                \bonne{20}
+                \mauvaise{14}
+                \mauvaise{12}
+            \end{reponseshoriz}
+        \end{question}
+
+        \begin{question}{qcmpriomultiadd}\bareme{b=1}  
+            $3\times4+2\times5$ vaut…
+            \begin{reponseshoriz}
+                \mauvaise{70}
+                \mauvaise{26}
+                \mauvaise{50}
+                \bonne{22}
+            \end{reponseshoriz}
+        \end{question}
+
+
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+
+        \begin{question}{qcmpriodiv}\bareme{b=1}  
+            $45\div9\div5$ vaut…
+            \begin{reponseshoriz}
+                \mauvaise{25}
+                \mauvaise{5}
+                \bonne{1}
+                \mauvaise{0,2}
+            \end{reponseshoriz}
+        \end{question}
+
+        \begin{question}{qcmfrequence}\bareme{b=1}  
+            Sur 40 élèves, 14 font du sport en club. La fréquence vaut…
+            \begin{reponseshoriz}
+                \mauvaise{0,14}
+                \bonne{0,35}
+                \mauvaise{3,5}
+                \mauvaise{0,4}
+            \end{reponseshoriz}
+        \end{question}
+
+
+        \begin{question}{qcmmoyenne}\bareme{b=1}  
+            La moyenne de 7 ; 9 ; 14 ; 10 est…
+            \begin{reponseshoriz}
+                \bonne{10}
+                \mauvaise{9}
+                \mauvaise{40}
+                \mauvaise{11}
+            \end{reponseshoriz}
+        \end{question}
+
+        \begin{question}{qcmmoyennesomme}\bareme{b=1}  
+            Une série de 5 notes a pour moyenne 12. La somme des notes vaut…
+            \begin{reponseshoriz}
+                \bonne{60}
+                \mauvaise{12}
+                \mauvaise{17}
+                \mauvaise{2,4}
+            \end{reponseshoriz}
+        \end{question}
+
+    \end{minipage}
+
+
+\end{exercicebox}
+\begin{exercicebox}[
+        \AMCOpen{
+            contentcommand=nodata,
+            answer=\usebox{\thbox}
+        }{\mauvaise{0}\bareme{0}\mauvaise{1}\bareme{1}\bonne[2]{2}\bareme{2}}]
+      Calculer en détaillant les étapes, sans sauter d'étapes intermédiaires.
+    \begin{enumerate}
+        \item $E=4×(13−6)$
+        \item $G=7×9−36$
+        \item $F=90÷(3×5)$
+        \item $H=45−(12+8÷2)$
+    \end{enumerate}
+\end{exercicebox}
+
+\begin{exercicebox}[
+    \AMCOpen{
+        contentcommand=nodata,
+        answer=\usebox{\thbox}
+    }{\mauvaise{0}\bareme{0}\mauvaise{1}\bareme{1}\bonne[2]{2}\bareme{2}}]
+    Un collège organise une sortie : le car coûte 480 €, l'entrée du musée 7,50 € par élève et 12 € par accompagnateur. Il y a 54 élèves et 6 accompagnateurs. Le foyer verse une aide de 150 €.
+    \begin{enumerate}
+        \item Écris, en une seule expression, le coût total de la sortie après l'aide du foyer.
+        \item Calcule ce coût total.
+        \item Quelle somme chaque élève doit-il payer si le coût restant est partagé équitablement entre les élèves ?
+        \item Le collège annonce « 15 € par élève ». Cette annonce est-elle correcte ?
+    \end{enumerate}
+\end{exercicebox}
+
+
+
+}   
+\end{document}

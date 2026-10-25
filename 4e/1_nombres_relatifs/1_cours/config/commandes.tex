@@ -89,11 +89,11 @@
     \fi
 }
 
-\newcommand{\exo}[1]{%
-    \includegraphics[
-        width=\linewidth,
-        keepaspectratio
-    ]{#1}%
+
+\newcommand*{\arret}[1]{%
+    \ifthenelse{%
+        \equal{#1}{\CLASSE}%
+    }%
+    {\end{document}}%
 }
-
-
+\renewcommand{\labelitemi}{\textbullet}

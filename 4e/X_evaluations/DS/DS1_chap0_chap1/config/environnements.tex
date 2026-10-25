@@ -1,0 +1,41 @@
+\newcounter{exercice}
+\newtcolorbox{exercicebox}[1][\unskip]{
+    colback=BleuClair,
+    colframe=Bleu,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Exercice \stepcounter{exercice}\theexercice #1},
+    left=5mm,
+    right=5mm,
+    top=2mm,
+    bottom=2mm
+}
+
+
+\newcounter{probleme}
+\newtcolorbox{probbox}[1][\unskip]{
+    colback=RougeClair,
+    colframe=Rouge,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Problème \stepcounter{probleme}\theprobleme #1},
+    left=5mm,
+    right=5mm,
+    top=2mm,
+    bottom=2mm
+}
+
+\newenvironment{tableau}[1]
+{%
+    \renewcommand{\arraystretch}{1.3}%
+    \begin{center}%
+    \begin{tabularx}{\linewidth}{#1}%
+    \toprule
+}
+{%
+    \bottomrule
+    \end{tabularx}%
+    \end{center}%
+    \renewcommand{\arraystretch}{1}%
+}
+

@@ -1,0 +1,136 @@
+\documentclass[12pt,a4paper]{article}
+
+\newif\ifanswers
+
+\ifdefined\PROF
+    \answerstrue
+\else
+    \answersfalse
+\fi
+
+\ifdefined\CLASSE
+\else
+    \def\CLASSE{}
+\fi
+
+
+
+% Configuration
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% ===============================================
+% ###### INFO ENTETE ########
+% ===============================================
+\def\titre{Priorités opératoires et nombres relatifs}
+\def\soustitre{}
+
+% En-tête
+\fancyhead[L]{Nom: \hspace{4cm} Prénom: \hspace{4cm}Classe:}
+
+% Numéro de page
+\fancyfoot[C]{\thepage}
+% Ligne sous l'en-tête
+\renewcommand{\headrulewidth}{0.4pt}
+% Pas de ligne au-dessus du pied de page
+\renewcommand{\footrulewidth}{0pt}
+
+
+\begin{document}
+\renewcommand{\labelitemi}{\textbullet}
+
+\begin{center}
+    {\Large\bb{Devoir surveillé 1}}
+\end{center}
+
+
+
+\begin{exercicebox}[\it{(Priorités opératoires)} \hspace*{\fill}\bb{4pts}]
+    Effectuer les calculs suivants \bb{en détaillant les étapes}
+    \begin{minipage}{0.49\textwidth}
+        \begin{align*}
+        &\text{A = }2+5\times4\\
+        &\text{B = }10-4+10\times2
+        \end{align*}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \begin{align*}
+            &\text{C = }7\times[2\times(8-3)]\\
+            &\text{D = } 2\times3\div4\times(18-16)
+        \end{align*}
+    \end{minipage}
+\end{exercicebox}
+
+\begin{exercicebox}[ \it{(Opérations de base sur les nombres
+    relatifs)}\hspace*{\fill}\bb{3pts}]
+    Effectuer les calculs suivants \bb{en détaillant les étapes}
+
+    \begin{minipage}{0.49\textwidth}
+    \begin{align*}
+        &\text{A = }(-10)+(-2)\\
+        &\text{B = }(-6)+(+14)\\
+        &\text{C = }(-18)-(-8)
+    \end{align*}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+    \begin{align*}
+        &\text{D = }13-(+4)\\
+        &\text{E = }2\times(-4)\\
+        &\text{F = }(+24)\div(-4)
+    \end{align*}
+    \end{minipage}
+\end{exercicebox}
+
+\begin{exercicebox}[ \it{(Enchaîner les calculs avec des nombres relatifs)}
+    \hspace*{\fill}\bb{3.5pts}]
+    \begin{enumerate}
+        \item Déterminer, sans calculer le résultat, si les résultats des 
+            calculs suivants sont positifs ou négatifs. \bb{Justifier par une phrase.}: \\
+            $$\text{a. } 4\times(-12) \hspace{1cm}\text{b. }
+            (-34)\times(-2)\times(+56) \hspace{1cm} \text{c. }
+            18\div(-3)\div(+4)$$
+        \item Effectuer les calculs suivants \bb{en détaillant les étapes}:
+    \begin{align*}
+        &\text{A = }18-(-6)+(-4)\\
+        &\text{B = }18\div(+6)\times(-4)
+    \end{align*}
+    \end{enumerate}
+\end{exercicebox}
+
+\begin{exercicebox}[ \it{(Priorités opératoires avec des nombres
+    relatifs)} \hfill \bb{6pts}]
+    Effectuer les calculs suivants \bb{en détaillant les étapes}
+    \begin{align*}
+        &\text{A = }9\times[\hspace{2pt}(-3)\times(-2)+5]\\
+        &\text{B = }[18+(-9)]\times[(55-50)+(-6)]\\
+        &\text{C = }[-2\times(4+(-6))]\div[5\times11+(-53)]
+    \end{align*}
+\end{exercicebox}
+
+\begin{probbox}[\hspace*{\fill}3.5pts]
+    Zahra se trouvait au rez-de-chaussée d'une tour de 31 étages.
+    \newline
+    \newline
+        Elle est entrée dans l'ascenseur et
+        a appuyé sur le bouton 3, mais l'ascenseur est
+        devenu fou : il est descendu de trois étages,
+        monté de cinq étages, descendu de quatre
+        étages, monté d'un étage. Et tout cela trois fois
+        de suite, avant de libérer Zahra !
+    \newline
+    \newline
+    Lorsqu'elle est sortie de l'ascenseur, était-elle à l'étage désiré ?
+    \newline
+    \newline
+    Détailler le raisonnement.
+
+\end{probbox}
+\end{document}

@@ -1,0 +1,54 @@
+\newlength{\mylen}
+\newcounter{exercice}
+\newtcolorbox{exercicebox}[1][\unskip]{
+    colback=white,
+    colframe=Bleu,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Exercice \stepcounter{exercice}\theexercice
+    \hspace{5pt} \settoheight{\mylen}{\hbox{#1}} \vspace{\mylen} #1},
+    left=5mm,
+    right=5mm,
+    top=2mm,
+    bottom=2mm
+}
+\newcounter{theorem}
+\newtcolorbox{theoremebox}[1][\unskip]{
+    colback=RougeClair,
+    colframe=Rouge,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Théorème \stepcounter{theorem}\thetheorem}\hspace{5pt}#1,
+    left=5mm,
+    right=5mm,
+    top=4mm,
+    bottom=4mm
+}
+
+\newcounter{probleme}
+\newtcolorbox{probbox}[1][\unskip]{
+    colback=RougeClair,
+    colframe=Rouge,
+    boxrule=1pt,
+    arc=3mm,
+    title=\bb{Problème \stepcounter{probleme}\theprobleme #1},
+    left=5mm,
+    right=5mm,
+    top=2mm,
+    bottom=2mm
+}
+
+\newenvironment{tableau}[1]
+{%
+    \renewcommand{\arraystretch}{1.3}%
+    \begin{center}%
+    \begin{tabularx}{\linewidth}{#1}%
+    \toprule
+}
+{%
+    \bottomrule
+    \end{tabularx}%
+    \end{center}%
+    \renewcommand{\arraystretch}{1}%
+}
+

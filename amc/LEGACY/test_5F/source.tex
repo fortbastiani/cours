@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+% Set page layout after the config files
+\geometry{
+  paper=a5paper,
+  hmargin=1cm,
+  headheight=1cm,
+  headsep=.3cm,
+  footskip=0cm,
+  top=1.5cm,
+  left=2cm,
+  right=2cm,
+  bottom=1.5cm
+}
+
+\def\AMCotextReserved{\emph{(Reservé)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest
+\AMCpostOquest=-7mm
+\AMCformHSpace=.3em
+
+\begin{document}
+
+\exemplaire{30}{    
+Nom et prénom :\hfill Date:\hspace{2cm} \\
+
+\AMCcodeGridInt[vertical=false]{etu}{2}
+
+\begin{exercicebox}[\it{QCM}]
+
+    \begin{question}{qcmprioparentheses}\bareme{b=1}
+        $(4+6)\times2$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{16}
+            \bonne{20}
+            \mauvaise{14}
+            \mauvaise{12}
+        \end{reponseshoriz}
+    \end{question}
+
+
+    \begin{question}{qcmcarre}\bareme{b=1}  
+        $4^2$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{8}
+            \mauvaise{2}
+            \mauvaise{20}
+            \bonne{16}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{qcmcube}\bareme{b=1}  
+        $3^3$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{9}
+            \mauvaise{1}
+            \bonne{27}
+            \mauvaise{$\dfrac{2}{3}$}
+        \end{reponseshoriz}
+    \end{question}
+    
+    \begin{question}{qcmprio}\bareme{b=1}  
+        Dans le calcul $3+(4\times2)+6\div2$, le premier calcul que j'effectue
+        est:
+        \begin{reponseshoriz}
+            \mauvaise{$6\div2$}
+            \mauvaise{$3+4$}
+            \bonne{$4\times2$}
+            \mauvaise{$2\div6$}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{qcmpriomultiadd}\bareme{b=1}  
+        $3\times4+2\times5$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{70}
+            \mauvaise{26}
+            \mauvaise{50}
+            \bonne{22}
+        \end{reponseshoriz}
+    \end{question}
+\end{exercicebox}
+
+}   
+\end{document}

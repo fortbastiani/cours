@@ -2,69 +2,67 @@
 
 \subsection{Cas d'une expression sans parenthèses}
 
-\begin{convention}
+\begin{convention}[\hspace{5pt} \it{$\times$ et $\div$ prioritaires sur + et -}]
     Dans une expression sans parenthèses, les \bb{multiplications} et les
     \bb{divisions} doivent être effectuées \answer{avant} les \bb{additions} et les
-    \bb{soustractions}. On dit que les multiplications et les divisions sont
+    \bb{soustractions}. \\
+
+    On dit que les multiplications et les divisions sont
     \answer{prioritaires} sur l'addition et la soustraction.
 \end{convention}
 
-\begin{exemplebox}
-
+\begin{exe}
     Calculer $3+2\times 4$ en \bb{soulignant} l'opération réalisée à chaque étape.
     \begin{align*}
         3+2\times 4 &= \answer{3+\underline{2 \times 4}}  \\
         &=\answer{\underline{3+8}}\\
         &=\answer{11}
     \end{align*}
+\end{exe}
 
-\end{exemplebox}
 
-
-\begin{convention}
+\begin{convention}[\hspace{5pt} \it{Seulement des + et des -}]
     Dans une expression sans parenthèses qui ne contient \bb{que des additions et
     des soustractions}, on effectue les calculs \answer{de gauche à droite} (on dit aussi
     \it{dans le sens de lecture}).
 \end{convention}
 
-\begin{exemplebox}
-
+\begin{exe}
     Calculer $10-3+6$ en \bb{soulignant} l'opération réalisée à chaque étape.
     \begin{align*}
         10-3+6 &= \answer{\underline{10-3}+6}  \\
         &=\answer{\underline{7+6}}\\
         &=\answer{13}
     \end{align*}
+\end{exe}
 
-\end{exemplebox}
 
-
-\begin{convention}
+\begin{convention}[\hspace{5pt} \it{Seulement des $\times$ et des $\div$}]
     Dans une expression sans parenthèses qui ne contient \bb{que des multiplications
     et des divisions} on effectue les calculs \answer{de gauche à droite} (on dit aussi
     \it{dans le sens de lecture}).
 \end{convention}
 
-\begin{exemplebox}
+\begin{exe}
     Calculer $30\div 5 \times 2$ en \bb{soulignant} l'opération réalisée à chaque étape.
     \begin{align*}
         30\div 5 \times 2 &= \answer{\underline{30\div 5} \times 2}  \\
         &=\answer{\underline{6\times 2}}\\
         &=\answer{12}
     \end{align*}
-\end{exemplebox}
+\end{exe}
 
 
-\begin{propbox}
+\begin{prop}[\it{Commutativité de l'addition et de la multiplication}]
     Si dans une expression sans parenthèses il n'y a \bb{que des additions} ou
     \bb{que des multiplications} alors on peut effectuer les calculs dans
     \bb{l'ordre que l'on veut}. 
     \newline
     \newline
     On dit que l'addition et la multiplication sont \bb{commutatives.}
-\end{propbox}
+\end{prop}
 
-\begin{exemplebox}
+\begin{exe}
     Pour les additions, on peut choisir l'ordre que l'on veut : 
 
     \begin{minipage}{0.48\textwidth}
@@ -87,40 +85,84 @@
         $$5\times37\times2 = \underline{5} \times 37 \times \underline{2} = \underline{10}
         \times 37 = 370$$
     \end{minipage}
-\end{exemplebox}
+\end{exe}
 
+
+\begin{aretenir}
+    Il est important de \bb{toujours souligner/surligner} à chaque étape le 
+    calcul prioritaire : seul ce qui est souligné/surligné est calculé à
+    l'étape d’après, le reste n'est pas utilisé et doit donc être recopié
+    \bb{au même endroit}.
+\end{aretenir}
 
 \subsection{Cas d'une expression avec parenthèses}
+\subsubsection{Parenthèses simples}
 
 \begin{convention}
-    Dans une expression contenant des parenthèses, on effectue \bb{en premier}
-    \answer{les calculs contenus dans les parenthèses.} Même si elles sont à la
-    fin du calcul.
+    On commence par effectuer les calculs \bb{contenus dans les parenthèses.} 
+    Même si elles sont à la fin du calcul.
 \end{convention}
 
-\begin{exemplebox}
+\begin{exe}
     \begin{align*}
         3 \times (2 + 4) &= \answer{3 \times (\underline{2+4})}\\
         &= \answer{\underline{3 \times (6)}}\\
         &= \answer{18}
     \end{align*}
-\end{exemplebox}
+\end{exe}
+\subsubsection{Parenthèses doubles}
+\begin{convention}
+    On commmence par les calculs contenus dans les
+    \answer{\bb{parenthèses les plus intérieures.}} 
+\end{convention}
+\begin{exe}
+    \begin{align*}
+        3 \times (2 \times (2+1)) &= \answer{3 \times (2 \times (\underline{2+1}))}\\
+        &= \answer{3 \times (\underline{2\times3})}\\
+        &= \answer{\underline{3\times6}}\\
+        &= \answer{18}
+    \end{align*}
+\end{exe}
 
-\begin{remarquebox}
-    Il est important de \bb{toujours souligner/surligner} à chaque étape le 
-    calcul prioritaire : seul ce qui est souligné/surligné est calculé à
-    l'étape d’après, le reste n'est pas utilisé et doit donc être recopié
-    \bb{au même endroit}.
-\end{remarquebox}
+\subsubsection{Cas particulier : la fraction}
+\begin{remarque}
+    Un quotient peut se noter sous forme linéaire avec le signe $\div$ ou sous
+    forme fractionnaire. Par exemple: 
+    $$\dfrac{30}{5}=30\div5=6$$
+    
+    On peut alors calculer les fractions en suivant deux méthodes. Prenons
+    l'exemple suivant :
+    $$A = \dfrac{12\times2-21}{4+2}$$
+    \begin{minipage}{0.49\textwidth}
+    \begin{center}
+        Ecriture fractionnaire
+    \end{center}
+        \begin{align*}
+            A&=\answer{\dfrac{\hl{12\times2}-21}{\hl{4+2}}}\\
+            A&=\answer{\dfrac{\hl{24-21}}{6}}\\
+            A&=\answer{\dfrac{3}{6}}\\
+            A&=\answer{0.5}
+        \end{align*}
+    \end{minipage}
+    \vline
+    \begin{minipage}{0.49\textwidth}
+    \begin{center}
+        Ecriture linéaire
+    \end{center}
+   \begin{align*}
+       A&=\answer{(\hl{12\times2}-21)\div(\hl{4+2})}\\
+        A&=\answer{(\hl{24-21})\div(6)}\\
+        A&=\answer{(3)\div(6)}\\
+        A&=\answer{0.5}
+    \end{align*}
+    \end{minipage}
+\end{remarque}
+
+\begin{attention}
+    Les parenthèses sont \bb{obligatoires} lorsqu'on passe de l'écriture
+    fractionnaire à l'écriture linéaire !
+\end{attention}
 
 \begin{align*}
-    a.&\hspace{5pt} 4\times5 - 19 \\
-    b.&\hspace{5pt} 11 + 1 \times 3 \\
-    c.&\hspace{5pt} 30 - 8 \times 2 \\
-    d.&\hspace{5pt} 29 - 25 + 5 \\
-    e.&\hspace{5pt} 200 \div 20 + 12 \\
-    f.&\hspace{5pt} 80-3\times23 \\
-    g.&\hspace{5pt} 20-18\div3 - 2 \\
-    h.&\hspace{5pt} 3-3+5\times23 \\
-    i.&\hspace{5pt} 54\div6-8 \\
+    $\frac{56}{4}$  
 \end{align*}

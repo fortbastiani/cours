@@ -1,61 +1,22 @@
 \documentclass[12pt,a4paper]{article}
 
-\newif\ifanswers
-
-\ifdefined\PROF
-    \answerstrue
-\else
-    \answersfalse
-\fi
-
-
-
-% Configuration
-\input{config/packages}
-\input{config/couleurs}
-\input{config/commandes}
-\input{config/environnements}
-
-
-\pagestyle{fancy}
-\fancyhf{}
-
-% ===============================================
-% ###### INFO ENTETE ########
-% ===============================================
+\def\niveau{4ème}
 \def\numchap{1}
 \def\titre{Nombres relatifs}
 \def\soustitre{}
 
-% En-tête
-\fancyhead[L]{Mathématiques -- 4ème}
-\fancyhead[R]{\titre}
-
-% Numéro de page
-\fancyfoot[C]{\thepage}
-% Ligne sous l'en-tête
-\renewcommand{\headrulewidth}{0.4pt}
-% Pas de ligne au-dessus du pied de page
-\renewcommand{\footrulewidth}{0pt}
-
+\input{config/preamble}
 
 \begin{document}
-\renewcommand{\labelitemi}{\textbullet}
+    \input{config/commandes}
 
-
-\input{config/frontpage}
-\input{sections/0_objectifs}
-\input{sections/1_vocabulaire}
-\input{exos/serie0}
-\input{sections/2_addition}
-\input{sections/3_soustraction}
-\input{sections/4_enchainement}
-\input{exos/serie1}
-\input{sections/5_multiplication}
-\input{exos/serie2}
-\input{sections/6_division}
-\input{exos/serie3}
-
-
+    \input{config/frontpage}
+    \input{sections/0_objectifs}
+    \input{sections/1_vocabulaire}
+    \input{sections/2_addition}
+    \input{sections/3_soustraction}
+    \input{sections/4_enchainement}
+    \input{sections/5_multiplication}
+    \input{sections/6_division}
 \end{document}
 

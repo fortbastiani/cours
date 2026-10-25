@@ -1,0 +1,76 @@
+\documentclass[a4paper]{article}
+% Configuration
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+
+\geometry{hmargin=1cm,headheight=1cm,headsep=.3cm,footskip=0cm,top=1.5cm,bottom=1.5cm}
+
+\def\AMCotextReserved{\emph{(Reservé à l'enseignant)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest\AMCpostOquest=-7mm
+
+\begin{document}
+\exemplaire{3}{    
+
+\AMCtext{explain}{}
+\fbox{\begin{minipage}{.48\linewidth}
+  Nom et prénom :\\
+  Date:
+\end{minipage}}
+\hfill
+\begin{minipage}{.48\linewidth}
+    \AMCcodeGridInt[vertical=false]{etu}{2}
+\end{minipage}
+\vspace{5mm}
+
+\begin{exercicebox}
+    \begin{question}{prez}    
+      Parmi les personnalités suivantes, laquelle a été présidente
+      de la république française~?
+      \begin{reponseshoriz}
+      \bonne{René Coty} \mauvaise{Alain Prost}\mauvaise{Marcel Proust} \mauvaise{Claude Monet}
+      \end{reponseshoriz}
+    \end{question}
+
+    \begin{questionmult}{pref}    
+      Parmi les villes suivantes, lesquelles sont des préfectures~?
+      \begin{reponseshoriz}
+        \bonne{Poitiers}
+        \mauvaise{Sainte-Menehould}
+        \bonne{Avignon}
+      \end{reponseshoriz}
+    \end{questionmult}
+\end{exercicebox}
+\AMCnumero{1}
+
+\begin{exercicebox}[(\it{Questions de cours}) ]
+    \begin{question}{ouverte}
+      Ecrire le théorème de Pythagore.
+        \AMCOpen{
+            contentcommand=nodata,
+            answer=\usebox{\thbox}
+        }{\mauvaise{0}\bareme{0}\mauvaise{1}\bareme{1}\bonne[2]{2}\bareme{2}}
+        \correctanswer{\input{réponses/th_pythagore}}
+    \end{question}
+
+    \begin{questionmult}{yo}\bareme{b=1,m=-1}
+        Cocher les carrés parfait (+1pt bonne réponses, -1pt mauvaise réponse)
+        réponse)
+        \begin{reponseshoriz}
+            \bonne{144} 
+            \mauvaise{56}
+            \mauvaise{64} 
+            \bonne{18}
+        \end{reponseshoriz}
+
+    \end{questionmult}
+    \end{exercicebox}
+\AMCnumero{1}
+}   
+\end{document}

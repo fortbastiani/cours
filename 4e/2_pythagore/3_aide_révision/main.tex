@@ -1,0 +1,117 @@
+\documentclass[12pt,a4paper]{article}
+
+\newif\ifanswers
+
+\ifdefined\PROF
+    \answerstrue
+\else
+    \answersfalse
+\fi
+
+\ifdefined\CLASSE
+\else
+    \def\CLASSE{}
+\fi
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+% Configuration
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% ===============================================
+% ###### INFO ENTETE ########
+% ===============================================
+\def\numchap{2}
+\def\titre{Théorème de Pythagore - Bilan}
+\def\soustitre{}
+
+% En-tête
+\fancyhead[L]{Mathématiques -- 4ème}
+\fancyhead[R]{\titre}
+
+% Numéro de page
+\fancyfoot[C]{\thepage}
+% Ligne sous l'en-tête
+\renewcommand{\headrulewidth}{0.4pt}
+% Pas de ligne au-dessus du pied de page
+\renewcommand{\footrulewidth}{0pt}
+
+
+\begin{document}
+\renewcommand{\labelitemi}{\textbullet}
+
+
+\input{config/frontpage}
+\section{Carré et racine carrée}
+\subsection{Notion à connaître}
+\begin{itemize}
+    \item Je connais la définition du carré d'un nombre.
+    \item Je connais une propriété concernant le signe d'un carré.
+    \item Je connais la définition d'une racine carrée.
+    \item Je connais une propriété concernant le signe de la racine carrée.
+    \item Je connais la définition d'un carré parfait.
+    \item Je connais la différence entre la valeur exacte et l'approximation
+        d'une racine carrée (ex : on ne peut pas écrire la valeur exacte de
+        $\sqrt{2}$ en utilisant un nombre décimal).
+\end{itemize}
+
+\subsection{Savoirs faire et méthode}
+\begin{itemize}
+    \item Je sais calculer le carré d'un nombre sur des exemples
+        simples. ($9^2, 1.5^1, 0.5^1$)
+    \item Je connais les carrés parfaits de 1 à 15.
+    \item Je sais retrouver la racine carré d'un carré parfait. (Ex: $\sqrt{121}$)
+    \item Je sais encadrer une racine carré par deux entiers successifs. (ex :
+        $3\le\sqrt{10}\le4$)
+    \item Je sais donner l'approximation d'une racine à un arrondi donné (ex:
+        "Arrondir $\sqrt{11}$ au millième")
+\end{itemize}
+
+\section{Théorème de Pythagore}
+\subsection{Notion à connaître}
+\begin{itemize}
+    \item Je sais définir un triangle rectangle.
+    \item Je connais l'énoncé du théorème de Pythagore.
+    \item Je connais l'égalité de Pythagore.
+    \item Je connais l'énoncé de la réciproque du théorème de Pythagore.
+\end{itemize}
+
+\subsection{Savoir faire}
+\begin{itemize}
+    \item Je sais nommer un triangle rectangle.
+    \item Je sais tracer un triangle rectangle à partir de sa définition sous
+        forme de phrase (ex: "Tracer le triangle NRV rectangle en V tel que
+        NR=9cm et NV=5cm".)
+    \item Je sais identifier l'hypoténuse dans un triangle rectangle.
+    \item Je sais calculer la longueur de l'hypoténuse à partir des longueurs
+        des deux autres côtés. EN REDIGEANT PARFAITEMENT LA DEMONSTRATION !
+    \item Je sais calculer la longueur d'un des côtés de l'angle de droit à
+        partir des longueurs des deux autres côtés. EN REDIGEANT PARFAITEMENT LA DEMONSTRATION !
+    \item Je sais montrer qu'un triangle n'est pas rectangle à partir des
+        longueurs de ses côtés et de la contraposée du théorème de Pythagore. 
+        EN SOIGANT LA REDACTION (Attention: ne pas
+        écrire l'égalité de Pythagore, d'abord calculer les carrés séparéments)
+    \item Je sais montrer qu'un triangle est rectangle à partir des
+        longueurs de ses côtés en utilisant la réciproque du théorème de
+        Pythagore. EN SOIGNANT LA REDACTION (Attention: ne pas
+        écrire l'égalite de Pythagore avant d'avoir vérifié l'égalité)
+\end{itemize}
+
+\subsection{Savoirs faire et méthode (autre)}
+\begin{itemize}
+    \item Je sais donner un résultat à l'aide de la valeur exacte et à l'aide
+        d'une valeur approchée.
+    \item Je sais calculer un racine carré à l'aide de ma calculatrice.
+\end{itemize}
+\end{document}

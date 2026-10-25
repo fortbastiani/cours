@@ -1,0 +1,30 @@
+% Configuration
+\input{config/packages}
+\input{config/couleurs}
+\input{config/environnements}
+
+\newif\ifanswers
+\ifdefined\PROF
+    \answerstrue
+\else
+    \answersfalse
+\fi
+
+\ifdefined\CLASSE
+\else
+    \def\CLASSE{}
+\fi
+
+% En-tête
+\pagestyle{fancy}
+\fancyhf{}
+
+% Numéro de page
+\fancyfoot[C]{\thepage}
+% Ligne sous l'en-tête
+\renewcommand{\headrulewidth}{0.4pt}
+% Pas de ligne au-dessus du pied de page
+\renewcommand{\footrulewidth}{0pt}
+
+\fancyhead[L]{Mathématiques -- \niveau}
+\fancyhead[R]{Chapitre \numchap -- \titre}

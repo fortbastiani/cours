@@ -18,36 +18,36 @@
     bottom=4mm
 }
 
-\newtcolorbox{propbox}{
+\newtcolorbox{prop}[1][\unskip]{
     colback=RougeClair,
     colframe=Rouge,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Propriété},
+    title=\bb{Propriété}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
     bottom=4mm
 }
 
-\newtcolorbox{convention}{
+\newtcolorbox{convention}[1][\unskip]{
     colback=white,
     colframe=Rouge,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Convention},
+    title=\bb{Convention}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
     bottom=4mm
 }
 
-\newtcolorbox{vocab}{
+\newtcolorbox{voc}[1][\unskip]{
     colback=white,
     colframe=Orange,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Vocabulaire},
+    title=\bb{Vocabulaire}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
@@ -57,12 +57,12 @@
 % Rappel de cours
 % ------------------------------------------------------------
 
-\newtcolorbox{rappelbox}{
+\newtcolorbox{rappel}[1][\unskip]{
     colback=VioletClair,
     colframe=Violet,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Rappel de cours},
+    title=\bb{Rappel de cours}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
@@ -73,7 +73,7 @@
 % Théorème
 % ------------------------------------------------------------
 
-\newtcolorbox[auto counter]{theoremebox}{
+\newtcolorbox[auto counter]{theorem}{
     colback=RougeClair,
     colframe=Rouge,
     boxrule=1pt,
@@ -89,12 +89,12 @@
 % ------------------------------------------------------------
 % Définition
 % ------------------------------------------------------------
-\newtcolorbox[auto counter]{definitionbox}{
+\newtcolorbox[auto counter]{definition}[1][\unskip]{
     colback=GrisClair,
     colframe=Rouge,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Définition \thetcbcounter},
+    title=\bb{Définition \thetcbcounter}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
@@ -102,12 +102,12 @@
 }
 
 
-\newtcolorbox{methodebox}{
+\newtcolorbox{method}[1][\unskip]{
     colback=TurquoiseClair,
     colframe=Turquoise,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Méthode},
+    title=\bb{Méthode}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
@@ -118,24 +118,24 @@
 % Attention / erreurs fréquentes
 % ------------------------------------------------------------
 
-\newtcolorbox{attentionbox}{
+\newtcolorbox{attention}[1][\unskip]{
     colback=JauneClair,
     colframe=Jaune,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Attention !},
+    title=\bb{Attention !}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
     bottom=4mm
 }
 
-\newtcolorbox{aretenir}{
+\newtcolorbox{aretenir}[1][\unskip]{
     colback=VertClair,
     colframe=Vert,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{A retenir},
+    title=\bb{A retenir}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
@@ -143,7 +143,7 @@
 }
 
 \newcounter{exercice}
-\newtcolorbox{exercicebox}{
+\newtcolorbox{exo}{
     colback=white,
     colframe=Gris,
     boxrule=1pt,
@@ -160,19 +160,19 @@
 
 \newcounter{exemple}
 
-\newtcolorbox{exemplebox}{
+\newtcolorbox{exe}[1][\unskip]{
     colback=white,
     colframe=Bleu,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Exemple \stepcounter{exemple}\theexemple},
+    title=\bb{Exemple \stepcounter{exemple}\theexemple}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
     bottom=4mm
 }
 
-\newtcolorbox{exempleboxsuite}{
+\newtcolorbox{exesuite}{
     colback=white,
     colframe=Bleu,
     boxrule=1pt,
@@ -187,27 +187,24 @@
 % remarque
 % ------------------------------------------------------------
 
-\newtcolorbox{remarquebox}{
+\newtcolorbox{remarque}[1][\unskip]{
     colback=BleuClair,
     colframe=Bleu,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Remarque},
+    title=\bb{Remarque}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
     bottom=4mm
 }
-% ------------------------------------------------------------
-% Correction
-% ------------------------------------------------------------
 
-\newtcolorbox{correctionbox}{
+\newtcolorbox{correction}[1][\unskip]{
     colback=VertClair,
     colframe=Vert,
     boxrule=1pt,
     arc=3mm,
-    title=\bb{Correction},
+    title=\bb{Correction}\hspace{5pt}#1,
     left=5mm,
     right=5mm,
     top=4mm,
@@ -215,9 +212,6 @@
 }
 
 
-% ============================================================
-% TABLEAUX
-% ============================================================
 
 \newenvironment{tableau}[1]
 {%

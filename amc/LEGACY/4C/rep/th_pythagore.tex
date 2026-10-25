@@ -1,0 +1,25 @@
+\begin{theoremebox}
+
+    \begin{tikzpicture}[scale=1.25]%,cap=round,>=latex]
+
+        \coordinate [label=left:$C$] (A) at (-1.5cm,-1.cm);
+        \coordinate [label=right:$A$] (C) at (1.5cm,-1.0cm);
+        \coordinate [label=above:$B$] (B) at (1.5cm,1.0cm);
+        \draw (A) -- node[above] {$a$} (B) -- node[right] {$c$} (C) -- node[below] {$b$} (A);
+
+        \draw (1.25cm,-1.0cm) rectangle (1.5cm,-0.75cm);
+        \node[text width=9cm, anchor=west, right] at (3,0){
+            Dans le triangle ABC rectangle en A, d'après le \bb{théorème de
+            Pythagore} on a : 
+        \begin{equation*}
+            BC^2=AB^2+AC^2
+        \end{equation*}
+        ou encore :
+        $$a^2=b^2+c^2$$
+        On dit que \it{le carré de l'hypoténuse est égal à la somme des carrés des
+        deux autres côtés}.
+        };
+    \end{tikzpicture}
+\end{theoremebox}
+
+

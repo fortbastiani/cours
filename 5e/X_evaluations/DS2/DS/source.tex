@@ -1,0 +1,165 @@
+\documentclass[12pt]{extarticle}
+
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+% Set page layout after the config files
+\geometry{
+  paper=a4paper,
+  hmargin=1cm,
+  headheight=1cm,
+  headsep=.3cm,
+  footskip=0cm,
+  top=1.5cm,
+  left=1.3cm,
+  right=1.3cm,
+  bottom=1.5cm
+}
+
+%\geometry{hmargin=1cm,headheight=1cm,headsep=.3cm,footskip=0cm,top=1.5cm,bottom=1.5cm}
+
+\def\AMCotextReserved{\emph{(Reservé)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest\AMCpostOquest=-7mm
+\AMCformHSpace=.3em
+\AMCinterBquest=1ex
+
+\makeatletter
+\def\jepasse{%
+\def\AMCbeginQuestion##1##2{\ifAMC@catalog\textbf{##1}\fi}
+\AMCquestionNumberfalse}
+\makeatother
+
+
+\begin{document}
+
+\exemplaire{30}{    
+
+% ---- Header ------
+\fbox{
+    \begin{minipage}{.40\linewidth}
+        \namefield{Nom: }
+        Prénom :\\
+        Date:
+    \end{minipage}
+}
+\hfill
+\begin{minipage}{.48\linewidth}
+    \AMCboxStyle{size=1.7ex,down=.2ex}
+    \AMCcodeGridInt[vertical=false]{etu}{2}
+\end{minipage}
+% ---- Fin Header ------
+
+
+\newcommand{\hpt}[1]{
+    \AMCboxStyle{shape=square,color=black,size=1.8ex,down=.2ex}
+    \begin{minipage}{2ex}
+        \jepasse
+        \begin{question}{##1}\bareme{b=1}
+            \begin{reponseshoriz}
+                \bonne{}
+            \end{reponseshoriz}
+        \end{question}
+    \end{minipage} 
+}
+\newcommand{\pt}[1]{
+    \AMCboxStyle{shape=oval,color=black,size=2ex,down=.2ex}
+    \begin{minipage}{2ex}
+        \jepasse
+        \begin{question}{##1}\bareme{b=1}
+            \begin{reponseshoriz}
+                \bonne{}
+            \end{reponseshoriz}
+        \end{question}
+    \end{minipage} 
+}
+ 
+ \begin{exercicebox}[\it{(Priorités opératoires)}
+     \hfill\pt{op1}\pt{op2}\pt{op3}\pt{op4}\pt{op5}\hpt{op5.5}\hpt{op6}]
+    Effectuer les calculs suivants \bb{en détaillant les étapes}\\
+    \begin{minipage}{0.48\textwidth}
+        \begin{align*}
+        &\text{A = }23-7+2 \\
+        &\text{B = }2+5\times4 \\
+        &\text{C = }6\times4\div2 
+        \end{align*}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \begin{align*}
+            &\text{D = }10-4+10\div2\\
+            &\text{E = }7\times[10-(8-3)]\\
+            &\text{F = } 2\times3\div4\times(18-16)
+        \end{align*}
+    \end{minipage}
+\end{exercicebox}
+
+
+\begin{exercicebox}[\it{(Vocabulaire des opérations)}
+     \hfill\pt{voc1}\pt{voc2}\hpt{voc2.5}\hpt{voc3}
+    ]
+    \begin{enumerate}
+        \item Traduis chacune des expressions suivantes sous forme de phrases:
+        \begin{align*}
+            &\text{A = }10+6 \hspace{2cm}\text{B = }12-4\hspace{2cm}\text{C =
+            }21\times4\hspace{2cm}\text{D = }64\div(3+5)
+        \end{align*}
+    \item Écris en une seule expression \bb{puis calcule} :
+        \begin{enumerate}
+            \item le produit de 8 par 6
+            \item la différence entre 13 et le produit de 2 par 3
+        \end{enumerate}
+    \end{enumerate}
+\end{exercicebox}
+
+
+\begin{exercicebox}[\it{(Puissances et fractions)}
+     \hfill\pt{pf1}\pt{pf2}\pt{pf3}\pt{pf4}\pt{pf5}\hpt{pf5.5}\hpt{pf6}]
+    Effectuer les calculs suivants \bb{en détaillant les étapes}\\
+    \begin{minipage}{0.48\textwidth}
+        \begin{align*}
+            &\text{A = }\dfrac{2\times18-6}{2+3} \\
+            &\text{B = } 3+2^2
+        \end{align*}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \begin{align*}
+            &\text{C = }(14-2\times4)^2-3^3 \\
+            &\text{D = }\dfrac{10\times(12-7)^2}{2\times(23-18)^2} 
+        \end{align*}
+    \end{minipage}
+\end{exercicebox}
+
+
+\begin{probbox}[
+     \hfill\pt{prob1}\pt{prob2}\pt{prob3}\pt{prob4}\hpt{prob4.5}\hpt{prob5}]
+    Un collège organise une sortie : le car coûte 480 €, l'entrée du musée 7,50 € par élève et 12 € par accompagnateur. Il y a 54 élèves et 6 accompagnateurs. Le foyer verse une aide de 150 €.
+    \begin{enumerate}
+        \item Écris, en une seule expression, le coût total de la sortie après
+            l'aide du foyer. 
+        \item Calcule ce coût total.
+        \item Quelle somme chaque élève doit-il payer si le coût restant est 
+            partagé équitablement entre les élèves ? 
+        \item Le collège annonce "15 € par élève ". Cette annonce est-elle correcte ?
+    \end{enumerate}
+\end{probbox}
+
+%\begin{probbox}
+%    Un groupe d'amis décident de faire une excursion dont le prix est fixé par
+%    une agence de voyage.
+%
+%    \begin{itemize}
+%        \item 1er cas : si chacun des amis verse 150€, il manque alors 1500€ pour
+%            l'excursion.
+%        \item 2eme cas : si chacun des amis vers 200€, il y a 200€ de trop.
+%    \end{itemize}
+%
+%    Quel est le nombre de participant à l'excursion ?\\
+%    Quel est le prix fixé par l'agence de voyage pour l'excursion ?
+%\end{probbox}
+
+}   
+\end{document}

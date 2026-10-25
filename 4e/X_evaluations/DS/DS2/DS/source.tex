@@ -1,0 +1,160 @@
+\documentclass[12pt]{extarticle}
+
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+% Set page layout after the config files
+\geometry{
+  paper=a4paper,
+  hmargin=1cm,
+  headheight=1cm,
+  headsep=.3cm,
+  footskip=0cm,
+  top=1.5cm,
+  left=1.3cm,
+  right=1.3cm,
+  bottom=1.5cm
+}
+
+%\geometry{hmargin=1cm,headheight=1cm,headsep=.3cm,footskip=0cm,top=1.5cm,bottom=1.5cm}
+
+\def\AMCotextReserved{\emph{(Reservé)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest\AMCpostOquest=-7mm
+\AMCformHSpace=.3em
+\AMCinterBquest=1ex
+
+\makeatletter
+\def\jepasse{%
+\def\AMCbeginQuestion##1##2{\ifAMC@catalog\textbf{##1}\fi}
+\AMCquestionNumberfalse}
+\makeatother
+
+
+\begin{document}
+
+\exemplaire{24}{    
+
+% ---- Header ------
+\fbox{
+    \begin{minipage}{.40\linewidth}
+        \namefield{Nom: }
+        Prénom :\\
+        Date:
+    \end{minipage}
+}
+\hfill
+\begin{minipage}{.48\linewidth}
+    \AMCboxStyle{size=1.7ex,down=.2ex}
+    \AMCcodeGridInt[vertical=false]{etu}{2}
+\end{minipage}
+% ---- Fin Header ------
+
+
+\newcommand{\hpt}[1]{
+    \AMCboxStyle{shape=square,color=black,size=1.8ex,down=.2ex}
+    \begin{minipage}{2ex}
+        \jepasse
+        \begin{question}{##1}\bareme{b=1}
+            \begin{reponseshoriz}
+                \bonne{}
+            \end{reponseshoriz}
+        \end{question}
+    \end{minipage} 
+}
+\newcommand{\pt}[1]{
+    \AMCboxStyle{shape=oval,color=black,size=2ex,down=.2ex}
+    \begin{minipage}{2ex}
+        \jepasse
+        \begin{question}{##1}\bareme{b=1}
+            \begin{reponseshoriz}
+                \bonne{}
+            \end{reponseshoriz}
+        \end{question}
+    \end{minipage} 
+}
+ 
+ \begin{exercicebox}[\bb{1}\hspace{3mm}\it{(Questions de cours)}
+    \hfill\pt{cours1}\pt{cours2}\pt{cours3}\pt{cours4}\hpt{cours4.5}\hpt{cours5}]
+    \begin{enumerate}
+        \item Donne la définition du carré d'un nombre.
+        \item Donne la définition de la racine carrée d'un nombre.
+        \item Enonce le théorème de Pythagore.
+        \item Donne la racine carrée des nombres suivants : 64, 36, 121.
+        \item Un élève affirme qu'une racine carré de 16 est -4 car
+            $(-4)\times(-4)=16$. A-t-il raison ? Justifie.
+    \end{enumerate}
+\end{exercicebox}
+
+ \begin{exercicebox}[\bb{2}\hspace{3mm}\it{(Calculer des longueurs)}
+    \hfill\pt{op1}\pt{op2}\pt{op3}\pt{op4}\pt{op5}\pt{op6}\pt{op7}\pt{op8}\pt{op9}\hpt{op9.5}\hpt{op10}]
+    \begin{enumerate}
+        \item Pour chacun des triangles suivants, calcule la longueur manquante,
+            d'abord en valeur exacte, puis en valeur approchée au cm.
+            \bb{Détaille ton raisonnement}.
+        \begin{enumerate}
+            \item Le triangle ABC est rectangle en A, AB=9m et AC=8m. Calcule BC.
+            \item Le triangle DEF est rectangle en E, EF=3m et DF=11m. Calcule ED.
+        \end{enumerate}
+        \begin{minipage}{0.40\textwidth}
+            \includegraphics[width=\textwidth]{images/angle.png}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.49\textwidth}
+            \item Dans le triangle ci-contre
+                \begin{enumerate}
+                    \item Justifie que le triangle est rectangle en C.
+                    \item Calcule la longueur BC, en valeur exacte puis arrondie au
+                        millimètre.
+                \end{enumerate}
+        \end{minipage}
+    \end{enumerate}
+\end{exercicebox}
+
+
+\begin{probbox}[\bb{1}
+     \hfill\pt{prob1}\pt{prob2}\pt{prob3}\pt{prob4}\hpt{prob4.5}\hpt{prob5}
+    ]
+    \begin{minipage}{0.58\textwidth}
+        Pour apprendre son métier, un apprenti
+        maçon a monté un mur en briques, de 0,90 m de
+        hauteur. Son patron arrive pour vérifier son
+        travail : il marque un point B sur le mur, à 80 cm
+        du sol, et un point A, à 60 cm du pied du mur. Il
+        mesure alors la distance entre les points A et B et
+        obtient 1 m.
+        \begin{enumerate}
+            \item L'apprenti a-t-il construit un mur parfaitement
+        perpendiculaire au sol ? Justifie.
+        \end{enumerate}
+
+
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.38\textwidth}
+        \includegraphics[width=\textwidth]{images/mur.png}
+    \end{minipage}
+\end{probbox}
+
+
+
+
+
+%\begin{probbox}
+%    Un groupe d'amis décident de faire une excursion dont le prix est fixé par
+%    une agence de voyage.
+%
+%    \begin{itemize}
+%        \item 1er cas : si chacun des amis verse 150€, il manque alors 1500€ pour
+%            l'excursion.
+%        \item 2eme cas : si chacun des amis vers 200€, il y a 200€ de trop.
+%    \end{itemize}
+%
+%    Quel est le nombre de participant à l'excursion ?\\
+%    Quel est le prix fixé par l'agence de voyage pour l'excursion ?
+%\end{probbox}
+
+}   
+\end{document}

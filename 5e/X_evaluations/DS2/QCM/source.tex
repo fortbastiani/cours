@@ -1,0 +1,182 @@
+\documentclass[12pt]{extarticle}
+
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+% Set page layout after the config files
+\geometry{
+  paper=a4paper,
+  hmargin=1cm,
+  headheight=1cm,
+  headsep=.3cm,
+  footskip=0cm,
+  top=1.5cm,
+  left=1.3cm,
+  right=1.3cm,
+  bottom=1.5cm
+}
+
+%\geometry{hmargin=1cm,headheight=1cm,headsep=.3cm,footskip=0cm,top=1.5cm,bottom=1.5cm}
+
+\def\AMCotextReserved{\emph{(Reservé)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest\AMCpostOquest=-7mm
+\AMCformHSpace=.3em
+\def\AMCbeginQuestion#1#2{\textbf{(#1)\hspace{2mm}}}
+
+\begin{document}
+\exemplaire{30}{    
+
+% ---- Header ------
+\fbox{
+    \begin{minipage}{.43\linewidth}
+        \namefield{Nom: }
+        Prénom :\\
+        Date:
+    \end{minipage}
+}
+\hfill
+\begin{minipage}{.48\linewidth}
+    \AMCcodeGridInt[vertical=false]{etu}{2}
+\end{minipage}
+% ---- Fin Header ------
+
+\begin{exercicebox}[1 \hspace{5mm}\it{Statistiques}]
+        \begin{question}{qcmfrequence}\bareme{b=1}  
+            Sur 40 élèves, 10 font du sport en club. La fréquence vaut…
+            \begin{reponseshoriz}
+                \mauvaise{0,10}
+                \bonne{0,25}
+                \mauvaise{4,0}
+                \mauvaise{10}
+                \mauvaise{0,40}
+            \end{reponseshoriz}
+        \end{question}
+
+
+        \begin{question}{qcmmoyenne}\bareme{b=1}  
+            La moyenne de 7 ; 9 ; 14 ; 10 est…
+            \begin{reponseshoriz}
+                \bonne{10}
+                \mauvaise{9}
+                \mauvaise{40}
+                \mauvaise{11}
+                \mauvaise{23}
+            \end{reponseshoriz}
+        \end{question}
+
+        \begin{question}{qcmmoyennesomme}\bareme{b=1}  
+            Une série de 6 notes a pour moyenne 12. La somme des notes vaut…
+            \begin{reponseshoriz}
+                \bonne{72}
+                \mauvaise{12}
+                \mauvaise{60}
+                \mauvaise{18}
+                \mauvaise{2}
+            \end{reponseshoriz}
+        \end{question}
+
+        \begin{minipage}{0.4\textwidth}
+            \includegraphics[width=\textwidth]{images/diagramme_barre.png}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.6\textwidth}
+
+            \begin{question}{qcmdiagramme}\bareme{b=1}  
+                Nombre de matchs joués dans la saison :
+                \begin{reponseshoriz}
+                    \bonne{28}
+                    \mauvaise{9}
+                    \mauvaise{6}
+                    \mauvaise{7}
+                \end{reponseshoriz}
+            \end{question}
+
+            \begin{question}{qcmdiagramme2}\bareme{b=1}  
+                Nombre de matchs où l’équipe a marqué au moins 3 buts : 
+                \begin{reponseshoriz}
+                    \bonne{8}
+                    \mauvaise{5}
+                    \mauvaise{20}
+                    \mauvaise{9}
+                \end{reponseshoriz}
+            \end{question}
+
+        \end{minipage}
+
+\end{exercicebox}
+
+\begin{exercicebox}[2 \hspace{5mm}\it{Opérations}]
+
+    \begin{question}{qcmpriodiv}\bareme{b=1}  
+        \begin{minipage}{0.20\textwidth}
+        $45\div9\div5$ vaut...
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.7\textwidth}
+        \begin{reponseshoriz}
+            \mauvaise{25}
+            \mauvaise{5}
+            \bonne{1}
+            \mauvaise{0,2}
+        \end{reponseshoriz}
+        \end{minipage}
+    \end{question}
+
+    \begin{question}{qcmpriomultiadd}\bareme{b=1}  
+        \begin{minipage}{0.20\textwidth}
+            $3\times4+2\times5$ vaut…
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.7\textwidth}
+            \begin{reponseshoriz}
+                \mauvaise{70}
+                \mauvaise{26}
+                \mauvaise{50}
+                \bonne{22}
+            \end{reponseshoriz}
+        \end{minipage}
+    \end{question}
+
+    \begin{question}{prez}    
+          Dans un calcul sans parenthèses, on effectue d'abord…
+          \begin{reponses}
+              \bonne{les multiplications et divisions}
+              \mauvaise{les additions et soustractions}
+              \mauvaise{les opérations de gauche à droite}
+              \mauvaise{l'opération avec le plus grand nombre}
+          \end{reponses}
+    \end{question}
+
+    \begin{question}{qcmprioparentheses}\bareme{b=1}
+        \begin{minipage}{0.20\textwidth}
+            $(4+6)\times2$ vaut…
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.60\textwidth}
+            \begin{reponseshoriz}
+                \mauvaise{16}
+                \bonne{20}
+                \mauvaise{14}
+                \mauvaise{12}
+            \end{reponseshoriz}
+        \end{minipage}
+    \end{question}
+
+
+    \begin{question}{qcmvocab}\bareme{b=1}  
+        La somme du quotient de 4 par 6 et de 3 s'écrit
+        \begin{reponseshoriz}
+            \bonne{$4\div6+3$}
+            \mauvaise{$4\div(6+3)$}
+            \mauvaise{$3+6\div4$}
+            \mauvaise{$4\times(3+6)$}
+        \end{reponseshoriz}
+    \end{question}
+
+\end{exercicebox}
+
+}   
+\end{document}

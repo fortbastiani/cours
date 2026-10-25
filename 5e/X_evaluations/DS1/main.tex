@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper]{article}
+
+\newif\ifanswers
+
+\ifdefined\PROF
+    \answerstrue
+\else
+    \answersfalse
+\fi
+
+\ifdefined\CLASSE
+\else
+    \def\CLASSE{}
+\fi
+
+
+
+% Configuration
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% ===============================================
+% ###### INFO ENTETE ########
+% ===============================================
+\def\titre{Priorités opératoires et nombres relatifs}
+\def\soustitre{}
+
+% En-tête
+\fancyhead[L]{Nom: \hspace{4cm} Prénom: \hspace{4cm}Classe:}
+
+% Numéro de page
+\fancyfoot[C]{\thepage}
+% Ligne sous l'en-tête
+\renewcommand{\headrulewidth}{0.4pt}
+% Pas de ligne au-dessus du pied de page
+\renewcommand{\footrulewidth}{0pt}
+
+
+\begin{document}
+\renewcommand{\labelitemi}{\textbullet}
+
+\begin{center}
+    {\Large\bb{Automatismes}} \\
+    (La calculatrice n'est pas autorisée)
+\end{center}
+\input{exos/qcm}
+\input{exos/conversion}
+\newpage
+\begin{center}
+    {\Large\bb{Devoir surveillé 1}}\\
+    (La calculatrice est autorisée.)
+\end{center}
+
+\setcounter{exercice}{0}
+
+\input{exos/surface}
+\input{exos/km}
+\input{exos/moyenne}
+
+
+
+
+
+\end{document}

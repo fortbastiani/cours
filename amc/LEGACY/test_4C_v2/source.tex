@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+
+\input{config/packages}
+\input{config/couleurs}
+\input{config/commandes}
+\input{config/environnements}
+
+% Set page layout after the config files
+\geometry{
+  paper=a5paper,
+  hmargin=1cm,
+  headheight=1cm,
+  headsep=.3cm,
+  footskip=0cm,
+  top=1.5cm,
+  left=2cm,
+  right=2cm,
+  bottom=1.5cm
+}
+
+\def\AMCotextReserved{\emph{(Reservé)}}
+\AMCopenOpts{boxframerule=0pt,boxframerulecol=red,framerule=0pt}
+\newdimen\AMCpostOquest
+\AMCpostOquest=-7mm
+\AMCformHSpace=.3em
+
+\begin{document}
+
+\exemplaire{24}{    
+Nom et prénom :\hfill Date:\hspace{2cm} \\
+
+\AMCcodeGridInt[vertical=false]{etu}{2}
+
+\begin{exercicebox}[\it{QCM}]
+
+    \begin{question}{sommeneg}\bareme{b=1}
+        $(-10)+(-2)$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{8}
+            \bonne{-12}
+            \mauvaise{+20}
+            \mauvaise{12}
+        \end{reponseshoriz}
+    \end{question}
+
+
+    \begin{question}{produitposneg}\bareme{b=1}  
+        $(-3)\times2$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{-5}
+            \bonne{-6}
+            \mauvaise{9}
+            \mauvaise{+5}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{divposneg}\bareme{b=1}  
+        $(-6)\div(-2)$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{-3}
+            \mauvaise{-12}
+            \bonne{+3}
+            \mauvaise{-6}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{subsub}\bareme{b=1}  
+        $(-18)-(-8)$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{26}
+            \bonne{-10}
+            \mauvaise{-14}
+            \mauvaise{-26}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{prioneg}\bareme{b=1}  
+        $9\times[\hspace{2pt}(-3)\times(-2)+5]$ vaut…
+        \begin{reponseshoriz}
+            \mauvaise{-45}
+            \bonne{99}
+            \mauvaise{59}
+            \mauvaise{-81}
+        \end{reponseshoriz}
+    \end{question}
+
+    \begin{question}{qcmegapythagore}    
+        ABC est rectangle en B. L'égalité de Pythagore s'écrit :
+        \begin{reponses}
+            \mauvaise{$AB^2=BC+AC$}
+            \mauvaise{$BC=AB+AC$}
+            \mauvaise{$AC^2=BC^2-AB^2$}
+            \bonne{$AC^2=AB^2+BC^2$}
+        \end{reponses}
+
+    \end{question}
+
+
+
+\end{exercicebox}
+
+
+}   
+\end{document}
